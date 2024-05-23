@@ -9,4 +9,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+    public DbSet<BladeRunner2077.Models.Producto> DataProducto {get; set; }
 }
