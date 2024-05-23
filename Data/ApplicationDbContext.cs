@@ -11,4 +11,7 @@ public class ApplicationDbContext : IdentityDbContext
     }
     public DbSet<BladeRunner2077.Models.Producto> DataProducto {get; set; }
     public DbSet<BladeRunner2077.Models.Proforma> DataItemCarrito {get; set; }
+    public DbSet<BladeRunner2077.Models.Pago> DataPago {get; set; }
+    public DbSet<BladeRunner2077.Models.Pedido> DataPedido {get; set; }
+    public DbSet<BladeRunner2077.Models.DetallePedido> DataDetallePedido {get; set; }
 }
