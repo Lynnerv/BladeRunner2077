@@ -10,4 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public DbSet<BladeRunner2077.Models.Producto> DataProducto {get; set; }
+    public DbSet<BladeRunner2077.Models.Proforma> DataItemCarrito {get; set; }
 }
