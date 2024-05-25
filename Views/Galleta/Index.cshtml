@@ -1,0 +1,19 @@
+@model BladeRunner2077.Integration.galletafortuna.dto.Galleta
+
+@{
+    ViewData["Title"] = "Galleta de la Fortuna";
+}
+
+<div class="container">
+    <h1 class="text-center mb-4">Tu Galleta de la Fortuna es:</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="alert alert-info text-center">
+                @Model.Mensaje
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Index">Obtener otra Galleta</a>
+    </div>
+</div>

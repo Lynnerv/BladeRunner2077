@@ -4,13 +4,14 @@ using BladeRunner2077.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.OpenApi.Models;
 using BladeRunner2077.Service;
-
+using BladeRunner2077.Integration.galletafortuna;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 /*var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));*/
+builder.Services.AddHttpClient<GalletaFortunaApiIntegration,GalletaFortunaApiIntegration >();
 
 var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
